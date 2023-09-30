@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#clockss {
+    text-align: center;
+    margin-top: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    background-image: url("./Wall\ 1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    display: flex;
+}
+
+.clock {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: rgb(42, 52, 82);
+    box-shadow: 3px 3px 46px #e4c5c5;
+    font-size: 36px;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.clock ul li {
+    list-style: none;
+    position: absolute;
+    text-align: center;
+    transform: rotate(calc(30deg * var(--i)));
+    inset: 5px;
+}
+
+.clock ul li span {
+    transform: rotate(calc(-30deg * var(--i)));
+    display: inline-block;
+}
+
+.clock:after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.needle {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.needle span {
+    width: 5px;
+    height: var(--h);
+    background-color: var(--clr);
+    position: absolute;
+    border-radius: 5px;
+}
